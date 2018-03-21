@@ -1,0 +1,15 @@
+source 'https://rubygems.org'
+
+gem 'cucumber' 
+gem 'rspec'
+gem 'selenium-webdriver', "2.53.4"
+gem 'watir-webdriver'
+gem 'rake'
+gem 'pry'
+
+# gem to connect to saucelabs and also dynamically change browser parameters
+gem 'saucelabs'
+
+
+
+
