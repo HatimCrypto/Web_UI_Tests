@@ -4,7 +4,7 @@ require 'selenium-webdriver'
 #Given i have logged in - Reused from create_portfolio.feature
 
 And("I would like to delete my portfolio") do
-  driver.navigate.to "https://www.cryptocompare.com/portfolio"
+  driver.navigate.to "https://rc-server.cryptocompare.com:3750/portfolio/"
   wait.until { driver.find_element(:css, '#tab-content-0 > div > md-content > div.toolbar-portfolio > div.toolbar-portfolio-actions.flex > button:nth-child(2) > md-icon')}.click
 end
 

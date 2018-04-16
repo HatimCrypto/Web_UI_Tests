@@ -1,4 +1,4 @@
-@global
+@global @search
 Feature: Search for a user
 As a user I would like to use the search feature to find a particular user
 

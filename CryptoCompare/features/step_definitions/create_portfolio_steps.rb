@@ -18,7 +18,7 @@ end
 
 When("I enter the portfolio section") do
   wait.until {driver.find_element(:css, '.navbar-profile > a:nth-child(1) > span:nth-child(2)')}
-  driver.navigate.to "https://www.cryptocompare.com/portfolio"
+  driver.navigate.to "https://rc-server.cryptocompare.com:3750/portfolio/"
 end
 
 When("I choose to add a new portfolio") do

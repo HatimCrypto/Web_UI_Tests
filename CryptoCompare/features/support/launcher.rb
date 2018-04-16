@@ -9,9 +9,9 @@ def wait
 end
 
 Before('@global') do 
-	Selenium::WebDriver::Chrome.driver_path="C:/Users/CC Guest/Documents/CryptoCompare/QA/chromedriver.exe"
-	driver.navigate.to "https://www.cryptocompare.com"
-	driver.manage.window.resize_to(1080,720)
+	Selenium::WebDriver::Chrome.driver_path="C:/Users/CC Guest/Documents/CryptoCompare/Source/Web_UI_Tests/CryptoCompare/chromedriver.exe"
+	driver.navigate.to "https://rc-server.cryptocompare.com:3750"
+	driver.manage.window.resize_to(1280,720)
 end
 
 
