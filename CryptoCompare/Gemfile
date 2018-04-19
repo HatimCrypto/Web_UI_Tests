@@ -8,7 +8,7 @@ gem 'rake'
 gem 'pry'
 gem 'watir'
 gem 'rails'
-gem 'rspec/retry'
+
 
 
 
