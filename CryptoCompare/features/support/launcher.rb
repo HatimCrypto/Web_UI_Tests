@@ -1,4 +1,6 @@
 require 'selenium-webdriver'
+require 'watir'
+require 'watir-webdriver'
 
 def driver
 	@driver ||= Selenium::WebDriver.for :chrome
