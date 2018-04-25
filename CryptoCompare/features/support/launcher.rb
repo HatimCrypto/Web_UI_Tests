@@ -1,4 +1,5 @@
 require 'selenium-webdriver'
+require 'watir'
 require 'watir-webdriver'
 
 
