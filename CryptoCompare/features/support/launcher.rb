@@ -18,7 +18,7 @@ def wait
 end
 
 Before('@global') do 
-	Selenium::WebDriver::Chrome.driver_path="C:/Users/CC Guest/Documents/CryptoCompare/QA/chromedriver.exe"
+	Selenium::WebDriver::Chrome.driver_path="chromedriver"
 	driver.navigate.to "https://rc-server.cryptocompare.com:3750"
 	driver.manage.window.resize_to(1280,1080)
 	driver.manage.timeouts.page_load = 300
