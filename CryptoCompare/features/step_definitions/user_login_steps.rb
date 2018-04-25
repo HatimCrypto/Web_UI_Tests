@@ -18,10 +18,11 @@ And("I enter a valid username and password") do
   Password = driver.find_element(:name, 'password')
   Password.click
   Password.send_keys 'Temp0rary'
-  SubmitButton = driver.find_element(:css, '.btn-login')
-  SubmitButton.click
 end
 
 Then("I should be successfully logged in") do
-  wait.until {driver.find_element(:css, '.navbar-profile > a:nth-child(1) > span:nth-child(2)')}
+  SubmitButton = driver.find_element(:css, '.btn-login')
+  SubmitButton.click
+  wait.until {driver.find_element(:css, '.navbar-profile > a:nth-child(1) > span:nth-child(2)')}.click
+  wait.until {driver.find_element(:css, 'body > div.normal-browser > div.navbar.navbar-main.navbar-fixed-top.visible-md-block.visible-lg-block.visible-sm-block > div > div > div.navbar-top.collapse.navbar-collapse > ul.nav.navbar-nav.navbar-right.ng-scope > li.dropdown.navbar-profile.open > ul > li:nth-child(7) > a')}
 end

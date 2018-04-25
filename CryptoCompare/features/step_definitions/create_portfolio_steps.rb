@@ -13,11 +13,12 @@ Given("I have logged in") do
   Password.send_keys 'Temp0rary'
   SubmitButton = driver.find_element(:css, '.btn-login')
   SubmitButton.click
+  wait.until {driver.find_element(:css, '.navbar-profile > a:nth-child(1) > span:nth-child(2)')}.click
+  wait.until {driver.find_element(:css, 'body > div.normal-browser > div.navbar.navbar-main.navbar-fixed-top.visible-md-block.visible-lg-block.visible-sm-block > div > div > div.navbar-top.collapse.navbar-collapse > ul.nav.navbar-nav.navbar-right.ng-scope > li.dropdown.navbar-profile.open > ul > li:nth-child(7) > a')}
   sleep 2
 end
 
 When("I enter the portfolio section") do
-  wait.until {driver.find_element(:css, '.navbar-profile > a:nth-child(1) > span:nth-child(2)')}
   driver.navigate.to "https://rc-server.cryptocompare.com:3750/portfolio/"
 end
 

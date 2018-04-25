@@ -5,7 +5,8 @@ require 'selenium-webdriver'
 
 And("I would like to delete my portfolio") do
   driver.navigate.to "https://rc-server.cryptocompare.com:3750/portfolio/"
-  wait.until { driver.find_element(:css, '#tab-content-0 > div > md-content > div.toolbar-portfolio > div.toolbar-portfolio-actions.flex > button:nth-child(2) > md-icon')}.click
+  wait.until { driver.find_element(:xpath, '//*[@id="tab-content-0"]/div/md-content/div[1]/div[2]/button[1]/md-icon')}.click
+
 end
 
 When("I delete my portfolio") do

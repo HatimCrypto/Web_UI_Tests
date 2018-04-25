@@ -4,7 +4,13 @@ require 'watir-webdriver'
 
 
 def driver
-	@driver ||= Selenium::WebDriver.for :chrome
+	options = Selenium::WebDriver::Chrome::Options.new
+    options.add_argument('--headless')
+    options.add_argument('--disable-gpu')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--ignore-certificate-errors')
+    options.add_argument('--window-size=1280,1080')
+	@driver ||= Selenium::WebDriver.for :chrome, options: options
 end
 
 def wait
@@ -12,9 +18,9 @@ def wait
 end
 
 Before('@global') do 
-	Selenium::WebDriver::Chrome.driver_path="chromedriver"
+	Selenium::WebDriver::Chrome.driver_path="C:/Users/CC Guest/Documents/CryptoCompare/QA/chromedriver.exe"
 	driver.navigate.to "https://rc-server.cryptocompare.com:3750"
-	driver.manage.window.resize_to(1280,720)
+	driver.manage.window.resize_to(1280,1080)
 	driver.manage.timeouts.page_load = 300
 end
 

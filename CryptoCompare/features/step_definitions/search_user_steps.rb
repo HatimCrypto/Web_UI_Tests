@@ -7,7 +7,7 @@ Given("I have entered cryptoqween in the search field") do
 end
 
 When("I select cryptoqween") do
-  sleep 2
+  sleep 5
   SearchField.send_keys:return
 end
 
