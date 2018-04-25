@@ -6,6 +6,7 @@ gem 'selenium-webdriver'
 gem 'watir-webdriver'
 gem 'rake'
 gem 'pry'
+gem 'watir'
 
 
 
