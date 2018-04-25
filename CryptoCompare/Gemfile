@@ -7,7 +7,7 @@ gem 'watir-webdriver'
 gem 'rake'
 gem 'pry'
 gem 'watir'
-gem 'rails'
+
 
 
 
